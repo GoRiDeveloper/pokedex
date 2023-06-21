@@ -1,0 +1,456 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/mixins" as m;
+
+.card {
+
+    position: relative;
+    height: 383px;
+    border: .625rem solid;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+    
+        transform: scale(1.02);
+        filter: blur(1px);
+
+    }
+
+    &--grass {
+
+        border-color: var(--grass-border);
+
+    }
+
+    &--fire {
+
+        border-color: var(--fire-border);
+
+    }
+
+    &--water {
+
+        border-color: var(--water-border);
+
+    }
+
+    &--normal {
+
+        border-color: var(--normal-border);
+
+    }
+
+    &--poison {
+
+        border-color: var(--poison-border);
+
+    }
+
+    &--fighting {
+
+        border-color: var(--fighting-border);
+
+    }
+
+    &--ghost {
+
+        border-color: var(--ghost-border);
+
+    }
+
+    &--rock {
+
+        border-color: var(--rock-border);
+
+    }
+
+    &--dark {
+
+        border-color: var(--dark-border);
+
+    }
+
+    &--ground {
+
+        border-color: var(--ground-border);
+
+    }
+
+    &--steel {
+
+        border-color: var(--steel-border);
+
+    }
+
+    &--electric {
+
+        border-color: var(--electric-border);
+
+    }
+
+    &--fairy {
+
+        border-color: var(--fairy-border);
+
+    }
+
+    &--ice {
+
+        border-color: var(--ice-border);
+
+    }
+
+    &--dragon {
+
+        border-color: var(--dragon-border);
+
+    }
+
+    &--bug {
+
+        border-color: var(--bug-border);
+
+    }
+
+    &--psychic {
+
+        border-color: var(--psychic-border);
+
+    }
+
+    &--flying {
+
+        border-color: var(--flying-border);
+
+    }
+
+    &__topBox {
+
+        position: relative;
+        display: flex;
+        height: 33.3%;
+
+        &--grass {
+
+            @include m.bgCards(v.$typeGrass);
+
+        }
+
+        &--fire {
+
+            @include m.bgCards(v.$typeFire);
+
+        }
+
+        &--water {
+
+            @include m.bgCards(v.$typeWater);
+
+        }
+
+        &--normal {
+
+            @include m.bgCards(v.$typeNormal);
+
+        }
+
+        &--poison {
+
+            @include m.bgCards(v.$typePoison);
+
+        }
+
+        &--fighting {
+
+            @include m.bgCards(v.$typeFighting);
+
+        }
+
+        &--ghost {
+
+            @include m.bgCards(v.$typeGhost);
+
+        }
+
+        &--rock {
+
+            @include m.bgCards(v.$typeRock);
+
+        }
+
+        &--dark {
+
+            @include m.bgCards(v.$typeDark);
+
+        }
+
+        &--ground {
+
+            @include m.bgCards(v.$typeGround);
+
+        }
+
+        &--steel {
+
+            @include m.bgCards(v.$typeSteel);
+
+        }
+
+        &--electric {
+
+            @include m.bgCards(v.$typeElectric);
+
+        }
+
+        &--fairy {
+
+            @include m.bgCards(v.$typeFairy);
+
+        }
+
+        &--ice {
+
+            @include m.bgCards(v.$typeIce);
+
+        }
+
+        &--dragon {
+
+            @include m.bgCards(v.$typeDragon);
+
+        }
+
+        &--bug {
+
+            @include m.bgCards(v.$typeBug);
+
+        }
+
+        &--psychic {
+
+            @include m.bgCards(v.$typePsychic);
+
+        }
+
+        &--flying {
+
+            @include m.bgCards(v.$typeFlying);
+
+        }
+
+    }
+
+    &__image {
+
+        position: absolute;
+        max-width: 13.375rem;
+        width: 60%;
+        top: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        align-self: center;
+
+    }
+
+    &__bottomBox {
+
+        margin-top: 2.65rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__headerInfo {
+
+        padding-bottom: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .15rem;
+
+    }
+
+    &__heading {
+
+        padding: 0 .5rem;
+        display: -moz-box;
+        display: -webkit-box;
+        display: box;
+        box-orient: vertical;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        font-size: 1.563rem;
+        font-weight: 600;
+        overflow: hidden;
+
+        &--grass {
+
+            color: var(--grass-border);
+    
+        }
+    
+        &--fire {
+    
+            color: var(--fire-border);
+    
+        }
+    
+        &--water {
+    
+            color: var(--water-border);
+    
+        }
+    
+        &--normal {
+    
+            color: var(--normal-border);
+    
+        }
+    
+        &--poison {
+    
+            color: var(--poison-border);
+    
+        }
+    
+        &--fighting {
+    
+            color: var(--fighting-border);
+    
+        }
+    
+        &--ghost {
+    
+            color: var(--ghost-border);
+    
+        }
+    
+        &--rock {
+    
+            color: var(--rock-border);
+    
+        }
+    
+        &--dark {
+    
+            color: var(--dark-border);
+    
+        }
+    
+        &--ground {
+    
+            color: var(--ground-border);
+    
+        }
+    
+        &--steel {
+    
+            color: var(--steel-border);
+    
+        }
+    
+        &--electric {
+    
+            color: var(--electric-border);
+    
+        }
+    
+        &--fairy {
+    
+            color: var(--fairy-border);
+    
+        }
+    
+        &--ice {
+    
+            color: var(--ice-border);
+    
+        }
+    
+        &--dragon {
+    
+            color: var(--dragon-border);
+    
+        }
+    
+        &--bug {
+    
+            color: var(--bug-border);
+    
+        }
+    
+        &--psychic {
+    
+            color: var(--psychic-border);
+    
+        }
+    
+        &--flying {
+    
+            color: var(--flying-border);
+    
+        }
+
+    }
+
+    &__type {
+
+        color: #4F4F4F;
+        font-size: .87rem;
+
+    }
+
+    &__typeText {
+
+        color: #9F9F9F;
+        font-size: .625rem;
+
+    }
+
+    &__line {
+
+        width: 100%;
+        border: 1px solid #E5E5E5;
+
+    }
+
+    &__footerInfo {
+
+        margin-top: .875rem;
+        display: grid;
+        gap: 1.5rem 4.2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    &__info {
+
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+
+    }
+
+    &__text {
+
+        color: #9F9F9F;
+        font-size: .625rem;
+
+    }
+
+    &__number {
+
+        color: #416460;
+        font-weight: 600;
+
+    }
+
+}

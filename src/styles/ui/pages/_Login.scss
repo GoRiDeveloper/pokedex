@@ -1,0 +1,109 @@
+@use "../../abstracts/mixins" as m;
+
+.login {
+
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 86rem;
+    min-height: inherit;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/backgrounds/bg-login.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @include m.tablet {
+
+        padding-bottom: 9rem;
+
+    };
+
+    &__logo {
+
+        padding-bottom: 1.3rem;
+        max-width: 42.25rem;
+        width: 100%;
+
+        @include m.telephone {
+
+            padding-bottom: 3rem;
+
+        };
+
+    }
+
+    &__info {
+
+        padding-bottom: 1.3rem;
+
+        @include m.telephone {
+
+            padding-bottom: 3rem;
+
+        };
+
+    }
+
+    &__heading {
+
+        color: var(--main-color-light);
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-align: center;
+
+        @include m.telephone {
+
+            font-size: 3.125rem;
+
+        };
+
+    }
+
+    &__text {
+
+        font-size: .9rem;
+        text-align: center;
+
+        @include m.telephone {
+
+            font-size: 1.563rem;
+
+        };
+
+    }
+
+    &__form {
+
+        position: relative;
+        padding: 1rem;
+        max-width: 42.25rem;
+        width: 100%;
+        box-shadow: var(--box-shw);
+
+    }
+
+    &__input {
+
+        width: 63%;
+        outline: none;
+
+    }
+
+    &__btn {
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35%;
+        height: 100%;
+        background-color: var(--main-color);
+        color: var(--white);
+        cursor: pointer;
+
+    }
+
+}

@@ -1,0 +1,631 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/mixins" as m;
+
+.itemDetail {
+
+    position: relative;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    width: 90%;
+
+    @include m.telephone {
+
+        padding: 0 1rem;
+
+    };
+
+    @include m.tablet {
+
+        padding: 0 2.5rem;
+
+    };
+
+    &__firstInfoBox {
+
+        margin: 10rem 0 4rem;
+        height: 100%;
+        background-color: var(--white);
+        border: 2px solid var(--white);
+        border-radius: 4px;
+        box-shadow: 0px 2px 16px 0px rgb(0 0 0 / .15);
+
+    }
+
+    &__firstInfoImage {
+
+        position: relative;
+        min-height: 11.563rem;
+        height: 15%;
+        border-radius: 4px;
+
+        &--grass {
+
+            @include m.bgCards(v.$typeGrass);
+
+        }
+
+        &--fire {
+
+            @include m.bgCards(v.$typeFire);
+
+        }
+
+        &--water {
+
+            @include m.bgCards(v.$typeWater);
+
+        }
+
+        &--normal {
+
+            @include m.bgCards(v.$typeNormal);
+
+        }
+
+        &--poison {
+
+            @include m.bgCards(v.$typePoison);
+
+        }
+
+        &--fighting {
+
+            @include m.bgCards(v.$typeFighting);
+
+        }
+
+        &--ghost {
+
+            @include m.bgCards(v.$typeGhost);
+
+        }
+
+        &--rock {
+
+            @include m.bgCards(v.$typeRock);
+
+        }
+
+        &--dark {
+
+            @include m.bgCards(v.$typeDark);
+
+        }
+
+        &--ground {
+
+            @include m.bgCards(v.$typeGround);
+
+        }
+
+        &--steel {
+
+            @include m.bgCards(v.$typeSteel);
+
+        }
+
+        &--electric {
+
+            @include m.bgCards(v.$typeElectric);
+
+        }
+
+        &--fairy {
+
+            @include m.bgCards(v.$typeFairy);
+
+        }
+
+        &--ice {
+
+            @include m.bgCards(v.$typeIce);
+
+        }
+
+        &--dragon {
+
+            @include m.bgCards(v.$typeDragon);
+
+        }
+
+        &--bug {
+
+            @include m.bgCards(v.$typeBug);
+
+        }
+
+        &--psychic {
+
+            @include m.bgCards(v.$typePsychic);
+
+        }
+
+        &--flying {
+
+            @include m.bgCards(v.$typeFlying);
+
+        }
+
+    }
+
+    &__image {
+
+        position: absolute;
+        bottom: 0rem;
+        left: 50%;
+        width: 21.313rem;
+        transform: translateX(-50%);
+
+    }
+
+    &__firstInfo {
+
+        margin: 0 auto;
+        max-width: 51.2rem;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__number {
+
+        margin: 2.5rem 0 1.75rem;
+        padding: .2rem .6rem;
+        width: max-content;
+        font-size: 1.5rem;
+        font-weight: 500;
+        border: 1px solid #d3d3d3;
+
+    }
+
+    &__heading {
+
+        position: relative;
+        padding: 0 1rem;
+        background-color: var(--white);
+        font-size: 1.8rem;
+        font-weight: 500;
+
+        @include m.tablet {
+
+            font-size: 2.5rem;
+
+        }
+
+        &--grass {
+
+            color: var(--grass-border);
+    
+        }
+    
+        &--fire {
+    
+            color: var(--fire-border);
+    
+        }
+    
+        &--water {
+    
+            color: var(--water-border);
+    
+        }
+    
+        &--normal {
+    
+            color: var(--normal-border);
+    
+        }
+    
+        &--poison {
+    
+            color: var(--poison-border);
+    
+        }
+    
+        &--fighting {
+    
+            color: var(--fighting-border);
+    
+        }
+    
+        &--ghost {
+    
+            color: var(--ghost-border);
+    
+        }
+    
+        &--rock {
+    
+            color: var(--rock-border);
+    
+        }
+    
+        &--dark {
+    
+            color: var(--dark-border);
+    
+        }
+    
+        &--ground {
+    
+            color: var(--ground-border);
+    
+        }
+    
+        &--steel {
+    
+            color: var(--steel-border);
+    
+        }
+    
+        &--electric {
+    
+            color: var(--electric-border);
+    
+        }
+    
+        &--fairy {
+    
+            color: var(--fairy-border);
+    
+        }
+    
+        &--ice {
+    
+            color: var(--ice-border);
+    
+        }
+    
+        &--dragon {
+    
+            color: var(--dragon-border);
+    
+        }
+    
+        &--bug {
+    
+            color: var(--bug-border);
+    
+        }
+    
+        &--psychic {
+    
+            color: var(--psychic-border);
+    
+        }
+    
+        &--flying {
+    
+            color: var(--flying-border);
+    
+        }
+
+    }
+
+    &__line {
+
+        position:absolute;
+        top: 20rem;
+        width: 80%;
+        border-bottom: 1px solid #9f9f9f;
+
+    }
+
+    &__details {
+
+        margin: 1.3rem 0 2rem;
+        display: flex;
+        column-gap: 1.3rem;
+
+    }
+
+    &__detail {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: .2rem;
+
+    }
+
+    &__detailTitle {
+
+        font-weight: 300;
+
+    }
+
+    &__detailText {
+
+        font-weight: 500;
+
+    }
+
+    &__characteristics {
+
+        margin-bottom: 7.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+
+        @include m.telephone {
+
+            flex-direction: row;
+
+        }
+
+    }
+
+    &__characteristic {
+
+        padding: 0 .5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include m.telephone {
+
+            padding: 0 1rem;
+
+        }
+
+    }
+
+    &__characteristicTitle {
+
+        padding-bottom: 1rem;
+
+    }
+
+    &__characteristicNameBox {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include m.tablet {
+
+            flex-direction: row;
+            gap: 1rem;
+
+        }
+
+    }
+
+    &__characteristicName {
+
+        margin-bottom: .5rem;
+        padding: .5rem 0;
+        width: 100%;
+        background-color: #85C9C5;
+        border-radius: 2px;
+        color: var(--white);
+        text-align: center;
+
+        &--purple {
+
+            background-color: #6C3D9A;
+
+        }
+
+        &--abilities {
+
+            background-color: #fff;
+            border: 1px solid #d3d3d3;
+            color: var(--black);
+
+        }
+
+    }
+
+    &__statsContainer {
+
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__statHeading {
+
+        position: relative;
+        padding: 0 1rem 0 0;
+        background-color: var(--white);
+        color: #302F2F;
+        font-size: 2.8rem;
+        font-weight: 500;
+        z-index: 1;
+
+    }
+
+    &__statLine {
+
+        position:absolute;
+        top: 54.5rem;
+        width: 70%;
+        border-bottom: 1px solid #9f9f9f;
+
+        @include m.telephone {
+
+            top: 45.9rem;
+
+        }
+
+        @include m.tablet {
+
+            top: 43.8rem;
+
+        }
+
+    }
+
+    &__statImg {
+
+        position: relative;
+        max-width: 5.563rem;
+        background-color: var(--white);
+
+    }
+
+    &__stats {
+
+        padding: 1rem;
+        width: 100%;
+
+    }
+
+    &__statContainer {
+
+        margin-bottom: 2.5rem;
+
+    }
+
+    &__statInfo {
+
+        padding-bottom: .75rem;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+
+    }
+
+    &__statBox {
+
+        width: 100%;
+        height: 2.125rem;
+        background-color: #f6f6f6;
+        border-radius: 4px;
+        overflow: hidden;
+
+    }
+
+    &__stat {
+
+        width: var(--width);
+        height: 100%;
+        background: linear-gradient(90deg, #FCD676 0%, #E6901E 100%);
+
+    }
+
+    &__secondInfoBox {
+
+        position: relative;
+        margin-bottom: 10.5rem;
+        padding: 3.825rem 0;
+        height: 100%;
+        background-color: var(--white);
+        border: 2px solid var(--white);
+        border-radius: 4px;
+        box-shadow: 0px 2px 16px 0px rgb(0 0 0 / .15);
+
+    }
+
+    &__secondInfo {
+
+        margin: 0 auto;
+        max-width: 51.2rem;
+
+    }
+
+    &__movementsInfoBox {
+
+        padding: 0 1rem 4.017rem 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__movementsBox {
+
+        margin-left: 3.25rem;
+
+    }
+
+    &__movementsHeading {
+
+        position: relative;
+        padding: 0 1rem;
+        background-color: var(--white);
+        font-size: 1.2rem;
+        z-index: 1;
+
+        @include m.telephone {
+
+            font-size: 1.9rem;
+
+        }
+
+        @include m.tablet {
+
+            font-size: 2.813rem;
+
+        }
+
+    }
+
+    &__movementsLine {
+
+        position: absolute;
+        top: 5.15rem;
+        width: 80%;
+        border-bottom: 1px solid #9f9f9f;
+
+        @include m.telephone {
+
+            top: 6.8rem;
+
+        }
+
+        @include m.desktop {
+
+            width: 70%;
+
+        }
+
+    }
+
+    &__movementsPokeball {
+
+        position: relative;
+        max-width: 2.5rem;
+        background-color: var(--white);
+
+        @include m.telephone {
+
+            max-width: 5.563rem;
+
+        }
+
+    }
+
+    &__movement {
+
+        margin: 0 1.75rem 2rem 0;
+        padding: 1rem;
+        width: max-content;
+        display: inline-block;
+        background-color: #e5e5e5;
+        color: #302f2f;
+        text-align: center;
+        border-radius: 3.125rem;
+
+        @include m.tablet {
+
+            font-size: 1.5rem;
+
+        }
+
+    }
+
+}

@@ -1,0 +1,48 @@
+@use "./mixins" as m;
+#root {
+
+    width: inherit;
+    min-height: inherit;
+
+}
+
+.theme {
+    
+    --main-color: #D93F3F;
+    --main-color-2: #DD1A1A;
+    --main-color-light: #FE1936;
+    --main-color-light-2: #ED8F8F;
+
+    --grass-border: #9ec5a8;
+    --fire-border: #E6901E;
+    --water-border: #83B9FF;
+    --normal-border: #735259;
+    --poison-border: #5B3184;
+    --fighting-border: #96402A;
+    --ghost-border: #323569;
+    --rock-border: #7E7E7E;
+    --dark-border: #0B0E0D;
+    --ground-border: #654008;
+    --steel-border: #5E736C;
+    --electric-border: #0C1395;
+    --fairy-border: #971B45;
+    --ice-border: #6FBEDF;
+    --dragon-border: #478A93;
+    --bug-border: #474747;
+    --psychic-border: #370852;
+    --flying-border: #59a0b8;
+    
+    --bg: #e5e5e5;
+
+    --white: #fff;
+    --black: #000;
+    --gray: #9F9F9F;
+
+    &--dark {
+
+        --white: #000;
+        --black: #fff;
+
+    };
+
+}

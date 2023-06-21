@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;800&display=swap');
+
+$telephone-bp: 467px;
+$tablet-bp: 760px;
+$desktop-bp: 1100px;
+
+$typeGrass: grass;
+$typeFire: fire;
+$typeWater: water;
+$typeNormal: normal;
+$typePoison: poison;
+$typeFighting: fighting;
+$typeGhost: ghost;
+$typeRock: rock;
+$typeDark: dark;
+$typeGround: ground;
+$typeSteel: steel;
+$typeElectric: electric;
+$typeFairy: fairy;
+$typeIce: ice;
+$typeDragon: dragon;
+$typeBug: bug;
+$typePsychic: psychic;
+$typeFlying: flying;
+
+:root {
+
+    --main-font: 'Inter', sans-serif;
+
+    --box-shw: 0 3px 6px rgb(0 0 0 / .15);
+
+}

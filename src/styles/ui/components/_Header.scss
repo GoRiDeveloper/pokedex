@@ -1,0 +1,58 @@
+@use "../../abstracts/mixins" as m;
+
+.header {
+
+    position: relative;
+
+    &__logo {
+
+        position: absolute;
+        top: 0;
+        padding: .5rem;
+        width: 12.5rem;
+
+        @include m.telephone {
+
+            padding: 1rem 1rem 0;
+            width: 20rem;
+
+        };
+
+        @include m.tablet {
+
+            width: unset
+
+        };
+
+        @include m.desktop {
+
+            padding: 2.5rem 0 0 2.5rem;
+
+        };
+        
+    }
+
+    &__btn {
+
+        position: fixed;
+        width: 4rem;
+        height: 4rem;
+        bottom: 1.3rem;
+        right: 1.3rem;
+        background-color: var(--main-color);
+        color: var(--white);
+        border-radius: 100%;
+        box-shadow: var(--box-shw);
+        transition: transform .2s ease-in;
+        cursor: pointer;
+        z-index: 1;
+
+        &:hover {
+
+            transform: translateY(-3%) scale(1.02);
+
+        }
+
+    }
+
+}

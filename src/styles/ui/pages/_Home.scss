@@ -1,0 +1,211 @@
+@use "../../abstracts/mixins" as m;
+
+.home {
+
+    padding: .5rem;
+
+    @include m.telephone {
+
+        padding: 0 1rem;
+
+    };
+
+    @include m.tablet {
+
+        padding: 0 2.5rem;
+
+    };
+
+    &__heading {
+
+        padding-bottom: 2.5rem;
+        font-size: .9rem;
+        font-weight: 600;
+
+        @include m.tablet {
+
+            font-size: 1.5rem;
+
+        };
+
+        &--user {
+
+            color: var(--main-color-light);
+
+        }
+
+    }
+
+    &__classification {
+
+        display: flex;
+        row-gap: 1rem;
+        flex-direction: column;
+
+        @include m.tablet {
+
+            column-gap: 1.5rem;
+            flex-direction: row;
+
+        };
+
+    }
+
+    &__form {
+
+        position: relative;
+        padding: 1rem;
+        width: 100%;
+        box-shadow: var(--box-shw);
+
+        @include m.tablet {
+            
+            width: 60%;
+
+        }
+
+    }
+
+    &__search {
+
+        width: 70%;
+        outline: none;
+
+    }
+
+    &__searchBtn {
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        background-color: var(--main-color);
+        color: var(--white);
+        cursor: pointer;
+
+    }
+
+    &__categories {
+
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        box-shadow: var(--box-shw);
+
+        &:hover .home__options {
+
+            display: flex;
+
+        }
+
+        @include m.tablet {
+            
+            width: 40%;
+
+        };
+
+    }
+
+    &__select {
+
+        position: relative;
+        padding: 1.094rem;
+        width: 100%;
+        height: 3.25rem;
+        outline: none;
+        cursor: pointer;
+
+        &::after {
+
+            content: attr(data-content);
+            position: absolute;
+            top: 0;
+            width: max-content;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+
+    }
+
+    &__options {
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 18.75rem;
+        display: none;
+        flex-direction: column;
+        overflow-y: auto;
+        z-index: 1;
+
+    }
+
+    &__option {
+
+        padding: 1rem;
+        background-color: var(--white);
+        transition: all .2s ease;
+
+        &:hover {
+
+            background-color: var(--main-color-light-2);
+            color: var(--white);
+
+        }
+
+    }
+
+    &__chevronDown {
+
+        position: absolute;
+        right: 0;
+        margin-right: 1rem;
+        display: flex;
+        align-self: center;
+        width: 2rem;
+        fill: var(--gray);
+
+    }
+
+    &__cardsContainer {
+
+        margin-top: 5.688rem;
+        display: grid;
+        gap: 2.063rem;
+        grid-template-columns: repeat(auto-fill, minmax(16.313rem, 16.313rem));
+        place-content: center;
+
+    }
+
+    &__pagination {
+
+        margin: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__page {
+
+        margin: 0 .3rem;
+        padding: 1rem;
+        border-radius: .375rem;
+        cursor: pointer;
+
+        &--btn {
+
+            background-color: var(--main-color-2);
+            color: var(--white);
+
+        }
+
+    }
+
+}
