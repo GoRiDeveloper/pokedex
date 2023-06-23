@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useAxios } from "../hooks/useAxios";
+import { ModalError } from "../components/ModalError";
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
@@ -23,7 +24,8 @@ export const ItemDetail = () => {
     return (
 
         <>
-            { loading && <h6 className="loader"> Loading... </h6> }
+            { (loading && !error) && <h6 className="loader"> Loading... </h6> }
+            { (error && !loading) && <ModalError error={error} /> }
             { 
                 data && (
 
@@ -128,6 +130,7 @@ export const ItemDetail = () => {
 
                 )
             }
+
         </>
 
     );

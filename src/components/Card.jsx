@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { useAxios } from "../hooks/useAxios";
+import { ModalError } from "./ModalError";
 
 export const Card = ({ url }) => {
 
-    const { data, loading, error } = useAxios({ url });
+    const newUrl = `${url}/juegos`;
+    const { data, loading, error } = useAxios({ url: newUrl });
+
     const formatTypesPokemon = (types) => {
 
         const nameTypes = types.map(({ type }) => type.name);
@@ -15,6 +18,12 @@ export const Card = ({ url }) => {
     return (
         
         <>
+            {
+                (error && !loading) && <ModalError error={error} />
+            }
+            {
+                (loading && !error) && (<h6> Loading... </h6>)
+            }
             {
                 data && (
                     <Link
@@ -55,9 +64,6 @@ export const Card = ({ url }) => {
 
                     </Link>
                 )
-            }
-            {
-                loading && (<h6> Loading... </h6>)
             }
         </>
 

@@ -1,0 +1,38 @@
+.modalError {
+
+    position: fixed;
+    margin: 1rem;
+    padding: 2rem;
+    bottom: 0;
+    display: inline-block;
+    background-color: var(--main-color-light-2);
+    border: 5px solid var(--main-color);
+    border-radius: 6px;
+
+    &__exit {
+
+        position: absolute;
+        top: 0;
+        right: -1px;
+        width: 2.4rem;
+        fill: var(--main-color);
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+
+            fill: var(--black);
+            transform: scale(1.1);
+
+        }
+
+    }
+
+    &__text {
+
+        color: var(--white);
+        font-size: 1rem;
+
+    }
+
+}
