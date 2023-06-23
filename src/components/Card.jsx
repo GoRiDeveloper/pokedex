@@ -4,8 +4,7 @@ import { ModalError } from "./ModalError";
 
 export const Card = ({ url }) => {
 
-    const newUrl = `${url}/juegos`;
-    const { data, loading, error } = useAxios({ url: newUrl });
+    const { data, loading, error } = useAxios({ url });
 
     const formatTypesPokemon = (types) => {
 
