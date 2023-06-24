@@ -36,14 +36,14 @@ export const Home = () => {
 
     }, [currentType]);
 
-    if (pokemons.length <= 0 && !currentType) {
+    if (pokemons.length <= 0 && !currentType && window !== undefined) {
 
         axios.get(pokemonsUrl)
             .then((res) => setPokemons(res.data.results))
             .catch((err) => console.log(err));
 
     };
-    if (types.length <= 0) {
+    if (types.length <= 0 && window !== undefined) {
 
         axios.get(typesPokemonsUrl)
             .then((res) => {
